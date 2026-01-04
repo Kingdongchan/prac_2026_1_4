@@ -11,7 +11,7 @@ main_frm =frm.frame(root, 450, 350, "top", "white")
 main_frm_obj = main_frm.frm_maker()
 
 #아래 메뉴 프레임 설정
-menu_frm =frm.frame(root, 400, 50, "top", "lightgray")
+menu_frm =frm.frame(root, 400, 50, "bottom", "lightgray")
 menu_frm_obj =menu_frm.frm_maker()
 
 #프레임에 +버튼, 홈버튼, 삭제버튼 추가
