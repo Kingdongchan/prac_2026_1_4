@@ -18,13 +18,14 @@ title_lb.lb_maker()
 title_txt = tx.text(top_frm_obj, 50, 1, "left")
 title_txt.txt_maker()
 #하위(제목, txt공간0 프레임
-under_frm = frm.frame(root, 400, 250, "top", "white")
-under_frm_obj = under_frm.frm_maker()
+mid_frm = frm.frame(root, 400, 250, "top", "white")
+mid_frm_obj = mid_frm.frm_maker()
 #'내용' 라벨 생성
-cont_lb = lab.label(under_frm_obj, "내용: ", "left")
+cont_lb = lab.label(mid_frm_obj, "내용: ", "left")
 cont_lb.lb_maker()
 
-cont_txt = tx.text(under_frm_obj, 50, 100, "left")
+cont_txt = tx.text(mid_frm_obj, 50, 100, "left")
 cont_txt.txt_maker()
+
 
 root.mainloop()
