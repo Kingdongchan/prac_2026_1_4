@@ -3,7 +3,7 @@ import tkinter as tk
 import object.button as bt 
 import object.frame as frm
 import plus_button 
-
+import home 
 root = tk.Tk()
 root.title("board_App")
 root.geometry("400x600")
@@ -21,7 +21,7 @@ plus_btn = bt._button(menu_frm_obj, "+", "left", True, lambda:plus_button.plus_b
 plus_btn.bnt_maker()
 
 #홈버튼 생성
-home_btn = bt._button(menu_frm_obj, "Home", "left", True)
+home_btn = bt._button(menu_frm_obj, "Home", "left", True, lambda:home.home_click(main_frm_obj))
 home_btn.bnt_maker()
 
 #삭제버튼
