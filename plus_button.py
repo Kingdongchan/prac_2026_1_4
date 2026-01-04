@@ -6,31 +6,29 @@ import object.frame as frm
 import object.label as lab
 import object.text as tx
 
-root = tk.Tk()
-root.geometry("400x600")
-#상위(제목, txt공간) 프레임
-top_frm = frm.frame(root, 400, 50, "top", "white")
-top_frm_obj = top_frm.frm_maker()
-#'제목' 라벨 생성
-title_lb = lab.label(top_frm_obj, "제목: ", "left")
-title_lb.lb_maker()
-#제목 옆에 텍스트 파일
-title_txt = tx.text(top_frm_obj, 50, 1, "left")
-title_txt.txt_maker()
-#하위(제목, txt공간0 프레임
-mid_frm = frm.frame(root, 400, 250, "top", "white")
-mid_frm_obj = mid_frm.frm_maker()
-#'내용' 라벨 생성
-cont_lb = lab.label(mid_frm_obj, "내용: ", "left")
-cont_lb.lb_maker()
+def plus_bnt(main_frm_obj):
+    #상위(제목, txt공간) 프레임
+    top_frm = frm.frame(main_frm_obj, 400, 50, "top", "white")
+    top_frm_obj = top_frm.frm_maker()
+    #'제목' 라벨 생성
+    title_lb = lab.label(top_frm_obj, "제목: ", "left")
+    title_lb.lb_maker()
+    #제목 옆에 텍스트 파일
+    title_txt = tx.text(top_frm_obj, 50, 1, "left")
+    title_txt.txt_maker()
+    #하위(제목, txt공간0 프레임
+    mid_frm = frm.frame(main_frm_obj, 400, 250, "top", "white")
+    mid_frm_obj = mid_frm.frm_maker()
+    #'내용' 라벨 생성
+    cont_lb = lab.label(mid_frm_obj, "내용: ", "left")
+    cont_lb.lb_maker()
 
-cont_txt = tx.text(mid_frm_obj, 50, 100, "left")
-cont_txt.txt_maker()
+    cont_txt = tx.text(mid_frm_obj, 50, 100, "left")
+    cont_txt.txt_maker()
 
-under_frm = frm.frame(root, 400, 50, "top", "white")
-under_frm_obj = under_frm.frm_maker()
+    under_frm = frm.frame(main_frm_obj, 400, 50, "top", "white")
+    under_frm_obj = under_frm.frm_maker()
 
-save_btn = bt._button(under_frm_obj, "저장", "left")
-save_btn.bnt_maker()
+    save_btn = bt._button(under_frm_obj, "저장", "right")
+    save_btn.bnt_maker()
 
-root.mainloop()
