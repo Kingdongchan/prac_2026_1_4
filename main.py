@@ -8,11 +8,23 @@ root.title("board_App")
 root.geometry("400x600")
 #맨 위 프레임 설정
 main_frm =frm.frame(root, 450, 350, "top", "white")
-main_frm.frm_maker()
+main_frm_obj = main_frm.frm_maker()
 
 #아래 메뉴 프레임 설정
-menu_frm =frm.frame(root, 400, 50, "bottom", "lightgray")
-menu_frm.frm_maker()
+menu_frm =frm.frame(root, 400, 50, "top", "lightgray")
+menu_frm_obj =menu_frm.frm_maker()
 
-#게시판, 홈, 뉴스, 
+#프레임에 +버튼, 홈버튼, 삭제버튼 추가
+#+바튼 생성
+plus_btn = bt._button(menu_frm_obj, "+", "left")
+plus_btn.bnt_maker()
+
+#홈버튼 생성
+home_btn = bt._button(menu_frm_obj, "Home", "left")
+home_btn.bnt_maker()
+
+#삭제버튼
+del_btn = bt._button(menu_frm_obj, "del", "left")
+del_btn.bnt_maker()
+
 root.mainloop()
