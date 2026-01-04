@@ -16,15 +16,15 @@ menu_frm_obj =menu_frm.frm_maker()
 
 #프레임에 +버튼, 홈버튼, 삭제버튼 추가
 #+바튼 생성
-plus_btn = bt._button(menu_frm_obj, "+", "left")
+plus_btn = bt._button(menu_frm_obj, "+", True, "left")
 plus_btn.bnt_maker()
 
 #홈버튼 생성
-home_btn = bt._button(menu_frm_obj, "Home", "left")
+home_btn = bt._button(menu_frm_obj, "Home", True, "left")
 home_btn.bnt_maker()
 
 #삭제버튼
-del_btn = bt._button(menu_frm_obj, "del", "left")
+del_btn = bt._button(menu_frm_obj, "del", True,"left")
 del_btn.bnt_maker()
 
 root.mainloop()

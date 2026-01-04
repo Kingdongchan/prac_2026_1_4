@@ -27,5 +27,10 @@ cont_lb.lb_maker()
 cont_txt = tx.text(mid_frm_obj, 50, 100, "left")
 cont_txt.txt_maker()
 
+under_frm = frm.frame(root, 400, 50, "top", "white")
+under_frm_obj = under_frm.frm_maker()
+
+save_btn = bt._button(under_frm_obj, "저장", "left")
+save_btn.bnt_maker()
 
 root.mainloop()
