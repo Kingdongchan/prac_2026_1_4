@@ -26,13 +26,13 @@ def plus_bnt(main_frm_obj):
     #'내용' 라벨 생성
     cont_lb = lab.label(mid_frm_obj, "내용: ", "left")
     cont_lb.lb_maker()
-
-    cont_txt = tx.text(mid_frm_obj, 50, 100, "left")
+    # 내용 옆에 텍스트 파일
+    cont_txt = tx.text(mid_frm_obj, 50, 500, "left")
     cont_txt.txt_maker()
-
-    under_frm = frm.frame(main_frm_obj, 400, 50, "top", "white")
+    #아리(저장 버튼) 프레인 생성
+    under_frm = frm.frame(main_frm_obj, 500, 50, "top", "white")
     under_frm_obj = under_frm.frm_maker()
-
+    #저장 버튼 생성
     save_btn = bt._button(under_frm_obj, "저장", "right")
     save_btn.bnt_maker()
 
