@@ -7,6 +7,10 @@ import object.label as lab
 import object.text as tx
 
 def plus_bnt(main_frm_obj):
+    #메인 화면에 있는 것들 지우기
+    for widget in main_frm_obj.winfo_children():
+        widget.destroy()
+        
     #상위(제목, txt공간) 프레임
     top_frm = frm.frame(main_frm_obj, 400, 50, "top", "white")
     top_frm_obj = top_frm.frm_maker()
